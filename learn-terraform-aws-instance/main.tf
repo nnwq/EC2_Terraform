@@ -27,7 +27,6 @@ resource "aws_security_group_rule" "TerraformTest" {
   from_port         = 0
   to_port           = 65535
   protocol          = "tcp"
-  cidr_blocks       = [aws_vpc.example.cidr_block]
-  ipv6_cidr_blocks  = [aws_vpc.example.ipv6_cidr_block]
+  cidr_blocks       = ["172.31.0.0/16", "10.0.0.0/8"]
   security_group_id = "sg-0ad89e5d4239b097e"
 }
